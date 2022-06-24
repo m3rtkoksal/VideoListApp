@@ -14,7 +14,7 @@
 		8E9EE4FE2865E38A009F5461 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 8E9EE4FC2865E38A009F5461 /* Main.storyboard */; };
 		8E9EE5002865E38B009F5461 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 8E9EE4FF2865E38B009F5461 /* Assets.xcassets */; };
 		8E9EE5032865E38B009F5461 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 8E9EE5012865E38B009F5461 /* LaunchScreen.storyboard */; };
-		8E9EE50A2865E4DC009F5461 /* VideoListApp.app in Resources */ = {isa = PBXBuildFile; fileRef = 8E9EE4F32865E38A009F5461 /* VideoListApp.app */; platformFilter = ios; };
+		8E9EE52E2865E78B009F5461 /* VideoModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8E9EE52D2865E78B009F5461 /* VideoModel.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -29,6 +29,7 @@
 		8E9EE4FF2865E38B009F5461 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		8E9EE5022865E38B009F5461 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		8E9EE5042865E38B009F5461 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		8E9EE52D2865E78B009F5461 /* VideoModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VideoModel.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -64,6 +65,7 @@
 		8E9EE4F52865E38A009F5461 /* VideoListApp */ = {
 			isa = PBXGroup;
 			children = (
+				8E9EE52C2865E760009F5461 /* Model */,
 				8E9EE4F62865E38A009F5461 /* AppDelegate.swift */,
 				8E9EE4F82865E38A009F5461 /* SceneDelegate.swift */,
 				8E9EE4FA2865E38A009F5461 /* ViewController.swift */,
@@ -73,6 +75,14 @@
 				8E9EE5042865E38B009F5461 /* Info.plist */,
 			);
 			path = VideoListApp;
+			sourceTree = "<group>";
+		};
+		8E9EE52C2865E760009F5461 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				8E9EE52D2865E78B009F5461 /* VideoModel.swift */,
+			);
+			path = Model;
 			sourceTree = "<group>";
 		};
 		E44AAD4BB20C853D93EC053F /* Frameworks */ = {
@@ -155,7 +165,6 @@
 				8E9EE5032865E38B009F5461 /* LaunchScreen.storyboard in Resources */,
 				8E9EE5002865E38B009F5461 /* Assets.xcassets in Resources */,
 				8E9EE4FE2865E38A009F5461 /* Main.storyboard in Resources */,
-				8E9EE50A2865E4DC009F5461 /* VideoListApp.app in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -211,6 +220,7 @@
 				8E9EE4FB2865E38A009F5461 /* ViewController.swift in Sources */,
 				8E9EE4F72865E38A009F5461 /* AppDelegate.swift in Sources */,
 				8E9EE4F92865E38A009F5461 /* SceneDelegate.swift in Sources */,
+				8E9EE52E2865E78B009F5461 /* VideoModel.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
