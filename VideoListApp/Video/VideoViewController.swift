@@ -11,6 +11,12 @@ class VideoViewController: UIViewController, VideoModule.View  {
     @IBOutlet weak var tableView: UITableView!
     var presenter: VideoModule.Presenter!
     var videos: [VideoModel]?
+    let cellReuseIdentifier = "VideoListTableViewCell"
+    
+    lazy var refreshControl: UIRefreshControl = {
+        let rc = UIRefreshControl()
+        return rc
+    }()
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -28,6 +34,10 @@ class VideoViewController: UIViewController, VideoModule.View  {
         tableView.rowHeight = UITableView.automaticDimension
         tableView.showsVerticalScrollIndicator = false
     }
+    
+    @objc func pullToRefresh() {
+        presenter.fetchVideos()
+    }
 }
 
 extension VideoViewController: UITableViewDataSource {
@@ -43,11 +53,15 @@ extension VideoViewController: UITableViewDataSource {
         return cell
     }
     
+    func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
+        return UITableView.automaticDimension
+    }
+    
 }
 
 extension VideoViewController: UITableViewDelegate {
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return 1
+        return 2
     }
     
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
