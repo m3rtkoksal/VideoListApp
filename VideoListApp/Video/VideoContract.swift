@@ -24,7 +24,7 @@ protocol VideoModulePresenterProtocol: AnyObject {
   var router: VideoModule.Router! { get set }
 
     func fetchVideos()
-    func didFetch(videos: [VideoModule])
+    func didFetch(videos: [VideoModel])
 }
 
 protocol VideoModuleRouterProtocol: AnyObject {

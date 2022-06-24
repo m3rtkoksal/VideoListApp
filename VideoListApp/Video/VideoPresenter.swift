@@ -16,7 +16,7 @@ class VideoPresenter: VideoModule.Presenter {
         interactor.fetchSeriesList()
     }
     
-    func didFetch(videos: [VideoModule]) {
+    func didFetch(videos: [VideoModel]) {
         
     }
 }

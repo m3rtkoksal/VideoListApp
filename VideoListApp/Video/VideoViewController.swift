@@ -10,11 +10,12 @@ import UIKit
 class VideoViewController: UIViewController, VideoModule.View  {
     @IBOutlet weak var tableView: UITableView!
     var presenter: VideoModule.Presenter!
+    var videos: [VideoModel]?
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        
         configureTableView()
-        // Do any additional setup after loading the view.
         presenter.fetchVideos()
     }
     
@@ -27,6 +28,29 @@ class VideoViewController: UIViewController, VideoModule.View  {
         tableView.rowHeight = UITableView.automaticDimension
         tableView.showsVerticalScrollIndicator = false
     }
-
 }
 
+extension VideoViewController: UITableViewDataSource {
+    
+    func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
+        return configureTableViewCell(indexPath: indexPath)
+    }
+    
+    func configureTableViewCell(indexPath: IndexPath) -> VideoListTableViewCell {
+        let cell = tableView.dequeueReusableCell(withIdentifier: VideoListTableViewCell.identifier, for: indexPath) as! VideoListTableViewCell
+        let videoData = (videos?[indexPath.row])!
+        cell.configure(model: videoData)
+        return cell
+    }
+    
+}
+
+extension VideoViewController: UITableViewDelegate {
+    func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+        return 1
+    }
+    
+    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        //presenter?.didFetch(videos: [VideoModel].)
+      }
+}
