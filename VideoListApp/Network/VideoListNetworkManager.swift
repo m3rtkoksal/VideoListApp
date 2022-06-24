@@ -25,8 +25,6 @@ class VideoListNetworkManager {
                             DispatchQueue.main.async {
                                 completion(result)
                             }
-                        } catch {
-                            print(error.localizedDescription)
                         }
                     }
                 }
