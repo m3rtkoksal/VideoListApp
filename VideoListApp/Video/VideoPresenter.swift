@@ -17,6 +17,13 @@ class VideoPresenter: VideoModule.Presenter {
     }
     
     func didFetch(videos: [VideoModel]) {
-        
+        view?.updateVideoList(videos.map({makeRowItem($0)}))
+    }
+}
+
+extension VideoPresenter {
+    
+    func makeRowItem(_ item: VideoModel) -> VideoModule.VideoViewModel {
+        .init(videoModel: .init(id: item.id, title: item.title, hlsURL: item.hlsURL, fullURL: item.fullURL, description: item.description, publishedAt: item.publishedAt, author: item.author))
     }
 }

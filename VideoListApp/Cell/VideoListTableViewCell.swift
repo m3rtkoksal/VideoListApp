@@ -19,9 +19,9 @@ class VideoListTableViewCell: UITableViewCell {
         // Initialization code
     }
     
-    func configure(model: VideoModel) {
-        titleLabel.label(textStr: model.title, textColor: .black, textFont: .systemFont(ofSize: 16, weight: .semibold), lineSpacing: -0.16, paragraphStyle: NSMutableParagraphStyle())
-        subtitleLabel.label(textStr: model.author.name, textColor: .systemGray, textFont: .systemFont(ofSize: 13, weight: .bold), lineSpacing: -0.13, paragraphStyle: NSMutableParagraphStyle())
+    func configure(model: VideoModule.VideoViewModel) {
+        titleLabel.label(textStr: model.videoModel.title, textColor: .black, textFont: .systemFont(ofSize: 16, weight: .semibold), lineSpacing: -0.16, paragraphStyle: NSMutableParagraphStyle())
+        subtitleLabel.label(textStr: model.videoModel.author.name, textColor: .systemGray, textFont: .systemFont(ofSize: 13, weight: .bold), lineSpacing: -0.13, paragraphStyle: NSMutableParagraphStyle())
     }
 
     override func setSelected(_ selected: Bool, animated: Bool) {

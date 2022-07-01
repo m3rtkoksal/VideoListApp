@@ -5,7 +5,7 @@
 //  Created by Mert Köksal on 1.07.2022.
 //
 
-import Foundation
+import UIKit
 
 class VideoListVC: UIViewController, VideoModule.View {
     
