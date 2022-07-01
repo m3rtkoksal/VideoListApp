@@ -11,7 +11,6 @@ class VideoViewController: UIViewController, VideoModule.View  {
     @IBOutlet weak var tableView: UITableView!
     var presenter: VideoModule.Presenter!
     var videos: [VideoModel]?
-    let cellReuseIdentifier = "VideoListTableViewCell"
     
     lazy var refreshControl: UIRefreshControl = {
         let rc = UIRefreshControl()
@@ -20,15 +19,18 @@ class VideoViewController: UIViewController, VideoModule.View  {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        
         configureTableView()
         presenter.fetchVideos()
+        
     }
     
-    private func configureTableView() {
+    func configureTableView() {
         tableView.register(VideoListTableViewCell.self)
+        tableView.addSubview(refreshControl)
+        refreshControl.addTarget(self, action: #selector(pullToRefresh), for: .valueChanged)
         tableView.delegate = self
         tableView.dataSource = self
+        tableView.estimatedRowHeight = 70
         tableView.separatorStyle = .none
         tableView.backgroundColor = UIColor.clear
         tableView.rowHeight = UITableView.automaticDimension
@@ -37,6 +39,13 @@ class VideoViewController: UIViewController, VideoModule.View  {
     
     @objc func pullToRefresh() {
         presenter.fetchVideos()
+    }
+    
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        if segue.identifier == "showDetailSegue" {
+            let videoDetailVC = segue.destination as! VideoDetailViewController
+            videoDetailVC.selectedVideo = sender as? VideoModel
+        }
     }
 }
 
@@ -47,7 +56,7 @@ extension VideoViewController: UITableViewDataSource {
     }
     
     func configureTableViewCell(indexPath: IndexPath) -> VideoListTableViewCell {
-        let cell = tableView.dequeueReusableCell(withIdentifier: VideoListTableViewCell.identifier, for: indexPath) as! VideoListTableViewCell
+        let cell = tableView.dequeueReusableCell(forIndexPath: indexPath) as VideoListTableViewCell
         let videoData = (videos?[indexPath.row])!
         cell.configure(model: videoData)
         return cell
@@ -67,4 +76,8 @@ extension VideoViewController: UITableViewDelegate {
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         //presenter?.didFetch(videos: [VideoModel].)
       }
+    
+    func numberOfSections(in tableView: UITableView) -> Int {
+        return 1
+    }
 }

@@ -11,7 +11,7 @@ class VideoInteractor: VideoModule.Interactor {
     
     var presenter: VideoModule.Presenter?
     
-    func fetchSeriesList() {
+    func fetchVideos() {
         VideoListNetworkManager.shared.providerVideo { [weak self] video in
             self?.presenter?.didFetch(videos: video ?? [])
         }

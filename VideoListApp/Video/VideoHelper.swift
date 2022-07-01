@@ -20,7 +20,7 @@ extension VideoModule {
     presenter.router = router
     view.presenter = presenter
     interactor.presenter = presenter
-    router.presenterVC = view
+
     
     return view
   }

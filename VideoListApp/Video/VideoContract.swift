@@ -10,12 +10,13 @@ import Foundation
 protocol VideoModuleViewProtocol: AnyObject {
   var presenter: VideoModule.Presenter! { get set }
   
+  func updateVideoList(_ items: [VideoModule.VideoViewModel])
 }
 
 protocol VideoModuleInteractorProtocol: AnyObject {
   var presenter: VideoModule.Presenter? { get set }
   
-  func fetchSeriesList()
+  func fetchVideos()
 }
 
 protocol VideoModulePresenterProtocol: AnyObject {
@@ -28,7 +29,7 @@ protocol VideoModulePresenterProtocol: AnyObject {
 }
 
 protocol VideoModuleRouterProtocol: AnyObject {
-  
+    
 }
 
 struct VideoModule {
@@ -36,4 +37,11 @@ struct VideoModule {
   typealias Interactor = VideoModuleInteractorProtocol
   typealias Presenter = VideoModulePresenterProtocol
   typealias Router = VideoModuleRouterProtocol
+}
+
+extension VideoModule {
+    
+    struct VideoViewModel {
+        var videoModel: VideoModel
+    }
 }

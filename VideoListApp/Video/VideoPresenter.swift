@@ -13,7 +13,7 @@ class VideoPresenter: VideoModule.Presenter {
     var router: VideoModule.Router!
     
     func fetchVideos() {
-        interactor.fetchSeriesList()
+        interactor.fetchVideos()
     }
     
     func didFetch(videos: [VideoModel]) {
