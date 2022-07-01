@@ -10,7 +10,7 @@ import UIKit
 extension VideoModule {
   
   static func createModule() -> UIViewController {
-    let view = VideoViewController()
+    let view = VideoListVC()
     let interactor = VideoInteractor()
     let presenter = VideoPresenter()
     let router = VideoRouter()

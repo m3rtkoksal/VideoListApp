@@ -7,13 +7,12 @@
 
 import UIKit
 
-class VideoListTableViewCell: UITableViewCell, Reusable, NibLoadable {
+class VideoListTableViewCell: UITableViewCell {
+    
+    static let identifier = String(describing: VideoListTableViewCell.self)
 
     @IBOutlet weak var titleLabel: UILabel!
     @IBOutlet weak var subtitleLabel: UILabel!
-    
-    
-    static let identifier = String(describing: VideoListTableViewCell.self)
     
     override func awakeFromNib() {
         super.awakeFromNib()
@@ -32,3 +31,5 @@ class VideoListTableViewCell: UITableViewCell, Reusable, NibLoadable {
     }
     
 }
+
+extension VideoListTableViewCell: Reusable, NibLoadable { }

@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		604C618192DE4792F8AFE24C /* Pods_VideoListApp.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 40D37D5D3ACC7188FFE4DD4D /* Pods_VideoListApp.framework */; };
+		8E243724286ECDF500225EFB /* VideoListVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8E243723286ECDF500225EFB /* VideoListVC.swift */; };
 		8E9EE4F72865E38A009F5461 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8E9EE4F62865E38A009F5461 /* AppDelegate.swift */; };
 		8E9EE4F92865E38A009F5461 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8E9EE4F82865E38A009F5461 /* SceneDelegate.swift */; };
 		8E9EE4FB2865E38A009F5461 /* VideoViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8E9EE4FA2865E38A009F5461 /* VideoViewController.swift */; };
@@ -33,6 +34,7 @@
 		40D37D5D3ACC7188FFE4DD4D /* Pods_VideoListApp.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_VideoListApp.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		478D78B26A77844FA2BA4838 /* Pods-VideoListApp.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-VideoListApp.debug.xcconfig"; path = "Target Support Files/Pods-VideoListApp/Pods-VideoListApp.debug.xcconfig"; sourceTree = "<group>"; };
 		4D20D2A351F8447DA8E53AB2 /* Pods-VideoListApp.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-VideoListApp.release.xcconfig"; path = "Target Support Files/Pods-VideoListApp/Pods-VideoListApp.release.xcconfig"; sourceTree = "<group>"; };
+		8E243723286ECDF500225EFB /* VideoListVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VideoListVC.swift; sourceTree = "<group>"; };
 		8E9EE4F32865E38A009F5461 /* VideoListApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = VideoListApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		8E9EE4F62865E38A009F5461 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		8E9EE4F82865E38A009F5461 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -165,6 +167,7 @@
 				8E9EE5462865FAD2009F5461 /* VideoPresenter.swift */,
 				8E9EE54A2865FAE4009F5461 /* VideoEntity.swift */,
 				8E9EE5482865FADA009F5461 /* VideoRouter.swift */,
+				8E243723286ECDF500225EFB /* VideoListVC.swift */,
 			);
 			path = Video;
 			sourceTree = "<group>";
@@ -310,6 +313,7 @@
 				8E9EE4F92865E38A009F5461 /* SceneDelegate.swift in Sources */,
 				8E9EE5432865FAB0009F5461 /* VideoContract.swift in Sources */,
 				8E9EE5472865FAD2009F5461 /* VideoPresenter.swift in Sources */,
+				8E243724286ECDF500225EFB /* VideoListVC.swift in Sources */,
 				8E9EE52E2865E78B009F5461 /* VideoModel.swift in Sources */,
 				8E9EE5312865EB35009F5461 /* VideoListNetworkManager.swift in Sources */,
 				8E9EE5492865FADA009F5461 /* VideoRouter.swift in Sources */,
