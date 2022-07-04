@@ -34,7 +34,7 @@ class PlayPauseButton: UIView {
         updateUI()
     }
 
-    private func updateStatus() {
+    func updateStatus() {
         if isPlaying {
             avPlayer?.pause()
         } else {
