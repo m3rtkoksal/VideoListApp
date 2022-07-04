@@ -36,6 +36,8 @@
 		8EAB35CD286ED5A200C05E16 /* VideoDetailRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8EAB35CC286ED5A200C05E16 /* VideoDetailRouter.swift */; };
 		8EAB35D0286ED78D00C05E16 /* VideoDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8EAB35CE286ED78D00C05E16 /* VideoDetailViewController.swift */; };
 		8EAB35D1286ED78D00C05E16 /* VideoDetailViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 8EAB35CF286ED78D00C05E16 /* VideoDetailViewController.xib */; };
+		8EAB35D32872D1E800C05E16 /* PlayPauseButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8EAB35D22872D1E800C05E16 /* PlayPauseButton.swift */; };
+		8EAB35D52872DF6D00C05E16 /* NextButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8EAB35D42872DF6D00C05E16 /* NextButton.swift */; };
 		8EC0608D28662C2200B151D2 /* NibLoadable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8E9EE53B2865F251009F5461 /* NibLoadable.swift */; };
 /* End PBXBuildFile section */
 
@@ -74,6 +76,8 @@
 		8EAB35CC286ED5A200C05E16 /* VideoDetailRouter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VideoDetailRouter.swift; sourceTree = "<group>"; };
 		8EAB35CE286ED78D00C05E16 /* VideoDetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VideoDetailViewController.swift; sourceTree = "<group>"; };
 		8EAB35CF286ED78D00C05E16 /* VideoDetailViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = VideoDetailViewController.xib; sourceTree = "<group>"; };
+		8EAB35D22872D1E800C05E16 /* PlayPauseButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlayPauseButton.swift; sourceTree = "<group>"; };
+		8EAB35D42872DF6D00C05E16 /* NextButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NextButton.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -169,6 +173,8 @@
 			isa = PBXGroup;
 			children = (
 				8E9EE5382865F189009F5461 /* Protocol */,
+				8EAB35D22872D1E800C05E16 /* PlayPauseButton.swift */,
+				8EAB35D42872DF6D00C05E16 /* NextButton.swift */,
 			);
 			path = Utility;
 			sourceTree = "<group>";
@@ -357,7 +363,9 @@
 				8E243724286ECDF500225EFB /* VideoListVC.swift in Sources */,
 				8E9EE52E2865E78B009F5461 /* VideoModel.swift in Sources */,
 				8EAB35C1286ED4CE00C05E16 /* VideoDetailContract.swift in Sources */,
+				8EAB35D52872DF6D00C05E16 /* NextButton.swift in Sources */,
 				8EC0608D28662C2200B151D2 /* NibLoadable.swift in Sources */,
+				8EAB35D32872D1E800C05E16 /* PlayPauseButton.swift in Sources */,
 				8EAB35C9286ED56B00C05E16 /* VideoDetailInteractor.swift in Sources */,
 				8E9EE5312865EB35009F5461 /* VideoListNetworkManager.swift in Sources */,
 				8E9EE5492865FADA009F5461 /* VideoRouter.swift in Sources */,
