@@ -10,6 +10,7 @@ import AVFoundation
 import AVKit
 
 class NextButton: UIView {
+    var presenter: VideoDetailModule.Presenter!
     var kvoRateContext = 0
     var avPlayer: AVPlayer?
     var isPlaying: Bool {
@@ -35,7 +36,10 @@ class NextButton: UIView {
     }
 
     private func updateStatus() {
-      
+        if isPlaying {
+            avPlayer?.pause()
+            presenter.prepareVideoDetail()
+        }
     }
 
     func updateUI() {

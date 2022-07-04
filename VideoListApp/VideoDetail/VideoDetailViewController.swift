@@ -33,11 +33,17 @@ class VideoDetailViewController: UIViewController, VideoDetailModule.View {
         
         playPauseButton.updateUI()
         nextButton.updateUI()
+        previousButton.updateUI()
     }
     
     func updateView(item: VideoModule.VideoViewModel) {
         titleLabel.label(textStr: item.videoModel.title, textColor: .black, textFont: .systemFont(ofSize: 16), lineSpacing: -0.16, paragraphStyle: NSMutableParagraphStyle())
-        descTextView.text = item.videoModel.description
+       
+        
+        let markdownParser = MarkdownParser()
+        let markdown = item.videoModel.description
+        descTextView.attributedText = markdownParser.parse(markdown)
+
         
         let playerViewController = AVPlayerViewController()
         let videoURL = URL(string: item.videoModel.fullURL)

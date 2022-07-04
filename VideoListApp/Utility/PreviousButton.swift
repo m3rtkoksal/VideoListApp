@@ -35,7 +35,10 @@ class PreviousButton: UIView {
     }
 
     private func updateStatus() {
-      
+        if isPlaying {
+            avPlayer?.pause()
+            
+        }
     }
 
     func updateUI() {
