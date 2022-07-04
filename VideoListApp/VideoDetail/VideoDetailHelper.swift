@@ -9,18 +9,16 @@ import UIKit
 
 extension VideoDetailModule {
   
-  static func createModule() -> UIViewController {
-    let view = VideoListVC()
-    let interactor = VideoInteractor()
-    let presenter = VideoPresenter()
-    let router = VideoRouter()
+    static func createModule(videoItem: VideoModule.VideoViewModel) -> UIViewController {
+        
+    let view = VideoDetailViewController()
+    let interactor = VideoDetailInteractor(videoItem: videoItem)
+    let presenter = VideoDetailPresenter()
     
     presenter.interactor = interactor
     presenter.view = view
-    presenter.router = router
     view.presenter = presenter
     interactor.presenter = presenter
-    router.presenterVC = view
     
     return view
   }

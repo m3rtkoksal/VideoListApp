@@ -10,18 +10,23 @@ import Foundation
 protocol VideoDetailModuleViewProtocol: AnyObject {
     var presenter: VideoDetailModule.Presenter! { get set }
     
+    func updateView(item: VideoModule.VideoViewModel)
 }
 
 protocol VideoDetailModuleInteractorProtocol: AnyObject {
     var presenter: VideoDetailModule.Presenter? { get set }
+    var videoItem: VideoModule.VideoViewModel { get set }
     
+    func fetchVideoDetail()
 }
 
 protocol VideoDetailModulePresenterProtocol: AnyObject {
-    var view: VideoModule.View? { get set }
-    var interactor: VideoModule.Interactor! { get set }
-    var router: VideoModule.Router! { get set }
+    var view: VideoDetailModule.View? { get set }
+    var interactor: VideoDetailModule.Interactor! { get set }
+    var router: VideoDetailModule.Router! { get set }
     
+    func prepareVideoDetail()
+    func didFetchedVideoDetail(_ item: VideoModule.VideoViewModel)
 }
 
 protocol VideoDetailModuleRouterProtocol: AnyObject {

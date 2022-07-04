@@ -10,6 +10,7 @@
     <objects>
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="VideoDetailViewController" customModule="VideoListApp" customModuleProvider="target">
             <connections>
+                <outlet property="titleLabel" destination="9V3-AS-VNc" id="BcD-IV-C8j"/>
                 <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
                 <outlet property="vmPlayer" destination="6mm-ru-sIF" id="GzF-1h-0E6"/>
             </connections>
@@ -26,10 +27,18 @@
                         <constraint firstAttribute="height" constant="250" id="eJo-c3-SRA"/>
                     </constraints>
                 </view>
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="9V3-AS-VNc">
+                    <rect key="frame" x="20" y="279" width="42" height="21"/>
+                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                    <nil key="textColor"/>
+                    <nil key="highlightedColor"/>
+                </label>
             </subviews>
             <viewLayoutGuide key="safeArea" id="fnl-2z-Ty3"/>
             <color key="backgroundColor" systemColor="systemBackgroundColor"/>
             <constraints>
+                <constraint firstItem="9V3-AS-VNc" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" constant="20" id="VKD-Y5-Wuw"/>
+                <constraint firstItem="9V3-AS-VNc" firstAttribute="top" secondItem="6mm-ru-sIF" secondAttribute="bottom" constant="29" id="bkt-Nm-A4c"/>
                 <constraint firstItem="6mm-ru-sIF" firstAttribute="top" secondItem="i5M-Pr-FkT" secondAttribute="top" id="sZG-76-9dg"/>
                 <constraint firstItem="6mm-ru-sIF" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" id="u0u-ez-BZa"/>
                 <constraint firstItem="fnl-2z-Ty3" firstAttribute="trailing" secondItem="6mm-ru-sIF" secondAttribute="trailing" id="vAo-75-ZnT"/>

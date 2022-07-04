@@ -26,10 +26,11 @@ protocol VideoModulePresenterProtocol: AnyObject {
 
     func fetchVideos()
     func didFetch(videos: [VideoModel])
+    func didSelect(item video: VideoModule.VideoViewModel)
 }
 
 protocol VideoModuleRouterProtocol: AnyObject {
-    
+    func navigateToVideoDetail(video: VideoModule.VideoViewModel)
 }
 
 struct VideoModule {

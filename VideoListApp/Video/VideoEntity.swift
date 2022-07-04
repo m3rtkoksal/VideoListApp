@@ -8,7 +8,7 @@
 import Foundation
 
 struct VideoModel: Decodable {
-    var vidoeId: String {
+    var videoId: String {
         return id
     }
     let id: String

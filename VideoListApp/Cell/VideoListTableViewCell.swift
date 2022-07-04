@@ -14,11 +14,6 @@ class VideoListTableViewCell: UITableViewCell {
     @IBOutlet weak var titleLabel: UILabel!
     @IBOutlet weak var subtitleLabel: UILabel!
     
-    override func awakeFromNib() {
-        super.awakeFromNib()
-        // Initialization code
-    }
-    
     func configure(model: VideoModule.VideoViewModel) {
         titleLabel.label(textStr: model.videoModel.title, textColor: .black, textFont: .systemFont(ofSize: 16, weight: .semibold), lineSpacing: -0.16, paragraphStyle: NSMutableParagraphStyle())
         subtitleLabel.label(textStr: model.videoModel.author.name, textColor: .systemGray, textFont: .systemFont(ofSize: 13, weight: .bold), lineSpacing: -0.13, paragraphStyle: NSMutableParagraphStyle())

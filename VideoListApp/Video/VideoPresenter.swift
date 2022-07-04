@@ -8,6 +8,7 @@
 import UIKit
 
 class VideoPresenter: VideoModule.Presenter {
+    
     var view: VideoModule.View?
     var interactor: VideoModule.Interactor!
     var router: VideoModule.Router!
@@ -18,6 +19,10 @@ class VideoPresenter: VideoModule.Presenter {
     
     func didFetch(videos: [VideoModel]) {
         view?.updateVideoList(videos.map({makeRowItem($0)}))
+    }
+    
+    func didSelect(item video: VideoModule.VideoViewModel) {
+        router.navigateToVideoDetail(video:video)
     }
 }
 

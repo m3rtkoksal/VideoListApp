@@ -10,5 +10,14 @@ import Foundation
 class VideoDetailInteractor: VideoDetailModule.Interactor {
     
     var presenter: VideoDetailModule.Presenter?
+    var videoItem: VideoModule.VideoViewModel
+    
+    init(videoItem: VideoModule.VideoViewModel) {
+        self.videoItem = videoItem
+    }
+    
+    func fetchVideoDetail() {
+        presenter?.didFetchedVideoDetail(videoItem)
+    }
     
 }

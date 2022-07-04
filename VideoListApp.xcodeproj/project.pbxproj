@@ -88,13 +88,6 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
-		8E17B34928671FD8000BF6AC /* Base */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			path = Base;
-			sourceTree = "<group>";
-		};
 		8E3F6E152869F92F00A90F48 /* VideoDetail */ = {
 			isa = PBXGroup;
 			children = (
@@ -131,7 +124,6 @@
 			isa = PBXGroup;
 			children = (
 				8E3F6E152869F92F00A90F48 /* VideoDetail */,
-				8E17B34928671FD8000BF6AC /* Base */,
 				8E9EE53D2865F4CC009F5461 /* Extension */,
 				8E9EE5372865F17F009F5461 /* Utility */,
 				8E9EE5322865F0B6009F5461 /* Cell */,

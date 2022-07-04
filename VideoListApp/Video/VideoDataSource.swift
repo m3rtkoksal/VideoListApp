@@ -58,7 +58,7 @@ extension VideoTableViewDataSource: UITableViewDataSource {
 extension VideoTableViewDataSource: UITableViewDelegate {
   
   func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
-//    presenter?.didClickMenuItem(at: indexPath.row)
+    presenter?.didSelect(item: items[indexPath.row])
   }
     
     func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {

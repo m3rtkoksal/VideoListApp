@@ -7,17 +7,17 @@
 
 import Foundation
 
-class VideoDetailPresenter: VideoModule.Presenter {
-    func fetchVideos() {
-        
+class VideoDetailPresenter: VideoDetailModule.Presenter {
+    
+    var view: VideoDetailModule.View?
+    var interactor: VideoDetailModule.Interactor!
+    var router: VideoDetailModule.Router!
+
+    func prepareVideoDetail() {
+        interactor.fetchVideoDetail()
     }
     
-    func didFetch(videos: [VideoModel]) {
-        
+    func didFetchedVideoDetail(_ item: VideoModule.VideoViewModel) {
+        view?.updateView(item: item)
     }
-    
-    var view: VideoModule.View?
-    var interactor: VideoModule.Interactor!
-    var router: VideoModule.Router!
-    
 }
