@@ -1,5 +1,5 @@
 //
-//  NextButton.swift
+//  PreviousButton.swift
 //  VideoListApp
 //
 //  Created by Mert Köksal on 4.07.2022.
@@ -9,7 +9,7 @@ import UIKit
 import AVFoundation
 import AVKit
 
-class NextButton: UIView {
+class PreviousButton: UIView {
     var kvoRateContext = 0
     var avPlayer: AVPlayer?
     var isPlaying: Bool {
@@ -39,7 +39,7 @@ class NextButton: UIView {
     }
 
     func updateUI() {
-        setBackgroundImage(name: "next")
+        setBackgroundImage(name: "previous")
     }
     
     func updatePosition() {
@@ -49,7 +49,7 @@ class NextButton: UIView {
         NSLayoutConstraint.activate([
             widthAnchor.constraint(equalToConstant: 100),
             heightAnchor.constraint(equalToConstant: 100),
-            trailingAnchor.constraint(equalTo: superview.trailingAnchor, constant: -16),
+            leadingAnchor.constraint(equalTo: superview.leadingAnchor, constant: 16),
             centerYAnchor.constraint(equalTo: superview.centerYAnchor)
             ])
     }

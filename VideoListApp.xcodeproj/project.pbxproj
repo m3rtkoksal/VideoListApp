@@ -38,6 +38,7 @@
 		8EAB35D1286ED78D00C05E16 /* VideoDetailViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 8EAB35CF286ED78D00C05E16 /* VideoDetailViewController.xib */; };
 		8EAB35D32872D1E800C05E16 /* PlayPauseButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8EAB35D22872D1E800C05E16 /* PlayPauseButton.swift */; };
 		8EAB35D52872DF6D00C05E16 /* NextButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8EAB35D42872DF6D00C05E16 /* NextButton.swift */; };
+		8EAB35D72872E22800C05E16 /* PreviousButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8EAB35D62872E22800C05E16 /* PreviousButton.swift */; };
 		8EC0608D28662C2200B151D2 /* NibLoadable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8E9EE53B2865F251009F5461 /* NibLoadable.swift */; };
 /* End PBXBuildFile section */
 
@@ -78,6 +79,7 @@
 		8EAB35CF286ED78D00C05E16 /* VideoDetailViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = VideoDetailViewController.xib; sourceTree = "<group>"; };
 		8EAB35D22872D1E800C05E16 /* PlayPauseButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlayPauseButton.swift; sourceTree = "<group>"; };
 		8EAB35D42872DF6D00C05E16 /* NextButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NextButton.swift; sourceTree = "<group>"; };
+		8EAB35D62872E22800C05E16 /* PreviousButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PreviousButton.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -175,6 +177,7 @@
 				8E9EE5382865F189009F5461 /* Protocol */,
 				8EAB35D22872D1E800C05E16 /* PlayPauseButton.swift */,
 				8EAB35D42872DF6D00C05E16 /* NextButton.swift */,
+				8EAB35D62872E22800C05E16 /* PreviousButton.swift */,
 			);
 			path = Utility;
 			sourceTree = "<group>";
@@ -366,6 +369,7 @@
 				8EAB35D52872DF6D00C05E16 /* NextButton.swift in Sources */,
 				8EC0608D28662C2200B151D2 /* NibLoadable.swift in Sources */,
 				8EAB35D32872D1E800C05E16 /* PlayPauseButton.swift in Sources */,
+				8EAB35D72872E22800C05E16 /* PreviousButton.swift in Sources */,
 				8EAB35C9286ED56B00C05E16 /* VideoDetailInteractor.swift in Sources */,
 				8E9EE5312865EB35009F5461 /* VideoListNetworkManager.swift in Sources */,
 				8E9EE5492865FADA009F5461 /* VideoRouter.swift in Sources */,

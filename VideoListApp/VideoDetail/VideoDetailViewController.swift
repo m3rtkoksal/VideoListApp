@@ -18,6 +18,7 @@ class VideoDetailViewController: UIViewController, VideoDetailModule.View {
     let markdownParser = MarkdownParser()
     var playPauseButton: PlayPauseButton!
     var nextButton: NextButton!
+    var previousButton: PreviousButton!
     var presenter: VideoDetailModule.Presenter!
     
     override func viewDidLoad() {
@@ -60,6 +61,11 @@ class VideoDetailViewController: UIViewController, VideoDetailModule.View {
         nextButton.avPlayer = player
         vmPlayer.addSubview(nextButton)
         nextButton.setup(in: self)
+        
+        previousButton = PreviousButton()
+        previousButton.avPlayer = player
+        vmPlayer.addSubview(previousButton)
+        previousButton.setup(in: self)
     }
     
 }
